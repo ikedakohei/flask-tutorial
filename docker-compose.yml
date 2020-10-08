@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  flask:
+    build: .
+    volumes:
+      - type: bind
+        source: .
+        target: /flask-tutorial
+    ports:
+      - "5001:5000"
+    tty: true
