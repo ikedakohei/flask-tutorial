@@ -3,6 +3,9 @@ version: '3.8'
 services:
   flask:
     build: .
+    environment:
+      - FLASK_APP=flaskr
+      - FLASK_ENV=development
     volumes:
       - type: bind
         source: .
